@@ -2,7 +2,7 @@
 
 :root {
   --background: #000000;
-  --foreground: #ffffff;
+  --foreground: #ededed;
 }
 
 @theme inline {
@@ -12,7 +12,7 @@
   --font-mono: var(--font-geist-mono);
   
   --animate-blink: blink 1s step-end infinite;
-
+  
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
@@ -22,5 +22,25 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-mono);
+  font-family: var(--font-sans);
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(24, 24, 27, 0.5);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(63, 63, 70, 0.8);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(161, 161, 170, 0.8);
 }
